@@ -48,6 +48,16 @@ function progress() {
   return { read: CHAPTERS.filter(c => store.read[c.id]).length, readable, known, exDone, last };
 }
 
+/* ---------- Hell / Dunkel ---------- */
+(function () {
+  const btn = $('#theme'), root = document.documentElement;
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const label = () => { btn.textContent = isDark() ? 'Hell' : 'Dunkel'; };
+  btn.addEventListener('click', () => { const next = isDark() ? 'light' : 'dark'; root.dataset.theme = next; try { localStorage.setItem('mtr-theme', next); } catch (e) { /* ignorieren */ } label(); });
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', label);
+  label();
+})();
+
 /* ---------- Router ---------- */
 let cleanup = null;
 function route() {

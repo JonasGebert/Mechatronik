@@ -1,5 +1,5 @@
 /* Kapitelinhalte. Kurzschreibweise: [[Zähler|Nenner]] = Bruch, _{x} = tiefgestellt, ^{x} = hochgestellt, $$ … $$ = Formelzeile */
-const DEFS = '<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#15222d"/></marker><marker id="ard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4a5b68"/></marker></defs>';
+const DEFS = '<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk" d="M0 0L10 5L0 10z"/></marker><marker id="ard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mkd" d="M0 0L10 5L0 10z"/></marker></defs>';
 
 const CHAPTERS = [
 {
@@ -295,11 +295,11 @@ $$ M_{2}·[[dv|dt]] = f_{M} + M_{2}rω² − M_{2}g·sin ε − f_{R} − f_{L} 
 <path class="l" d="M40 190V25" marker-end="url(#ar)"/><path class="l" d="M40 190H290" marker-end="url(#ar)"/><text x="22" y="30">m</text><text x="280" y="208">n</text>
 <path class="c1" d="M55 60C120 100 190 125 270 135"/><text x="235" y="155">m_M</text>
 <path class="c2" d="M55 170C130 150 200 110 255 40"/><text x="258" y="38">m_L</text>
-<circle cx="163" cy="118" r="4" fill="#15222d"/><text class="mid" x="165" y="212">a) stabil</text>
+<circle cx="163" cy="118" r="4" class="mk"/><text class="mid" x="165" y="212">a) stabil</text>
 <path class="l" d="M370 190V25" marker-end="url(#ar)"/><path class="l" d="M370 190H620" marker-end="url(#ar)"/><text x="352" y="30">m</text><text x="610" y="208">n</text>
 <path class="c1" d="M385 170C460 150 530 110 585 40"/><text x="588" y="38">m_M</text>
 <path class="c2" d="M385 60C450 100 520 125 600 135"/><text x="565" y="155">m_L</text>
-<circle cx="493" cy="118" r="4" fill="#15222d"/><text class="mid" x="495" y="212">c) instabil</text>
+<circle cx="493" cy="118" r="4" class="mk"/><text class="mid" x="495" y="212">c) instabil</text>
 </svg>
 <figcaption>Blau: Motor, orange: Last. Rechts vom Schnittpunkt muss die Last überwiegen.</figcaption>
 </figure>
